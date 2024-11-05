@@ -24,6 +24,8 @@ const deliveryProxy = httpProxy(env.DELIVERY_API_URL, {
   parseReqBody: false,
 });
 
+app.use(express.json());
+
 // restaurant
 
 app.get("/api/dishes", (req, res, next) => {
