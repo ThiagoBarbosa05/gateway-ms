@@ -6,7 +6,7 @@ const app = express();
 
 const RestaurantProxy = httpProxy(env.RESTAURANT_API_URL, {
   preserveHostHdr: false,
-  parseReqBody: false,
+  parseReqBody: true,
 });
 
 const authProxy = httpProxy(env.AUTH_API_URL, {
