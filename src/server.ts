@@ -5,22 +5,22 @@ import { env } from "./env";
 const app = express();
 
 const RestaurantProxy = httpProxy(env.RESTAURANT_API_URL, {
-  preserveHostHdr: true,
+  preserveHostHdr: false,
   parseReqBody: false,
 });
 
 const authProxy = httpProxy(env.AUTH_API_URL, {
-  preserveHostHdr: true,
+  preserveHostHdr: false,
   parseReqBody: false,
 });
 
 const storeProxy = httpProxy(env.STORE_API_URL, {
-  preserveHostHdr: true,
+  preserveHostHdr: false,
   parseReqBody: false,
 });
 
 const deliveryProxy = httpProxy(env.DELIVERY_API_URL, {
-  preserveHostHdr: true,
+  preserveHostHdr: false,
   parseReqBody: false,
 });
 
